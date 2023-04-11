@@ -1,0 +1,172 @@
+:root{
+  --10px: 0.625rem;
+  --13px: 0.813rem;
+  --15px: 0.938rem;
+  --17px: 1.063rem;
+  --24px: 1.5rem;
+  --30px: 1.875rem;
+  --35px: 2.188rem;
+  --40px: 2.5rem;
+  --44px: 2.75rem;
+  --50px: 3.125rem;
+  --100px: 6.25rem;
+
+  --color-brown-dark: #211F20;
+  --color-brown-light: #5B483A;
+  --color-dark_III: #292929;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+}
+
+body{
+  user-select: none;
+}
+
+ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li{
+  list-style: none;
+}
+
+h1{
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+}
+
+h2{
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: var(--57px);
+}
+
+p{
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 0.938rem;
+  line-height: var(--24px);
+}
+
+a {
+  font-weight: 400;
+  font-size: var(--15px);
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.wrapper{
+  max-width: 93.5%;
+  margin: 0 auto;
+}
+
+/* ----------
+HEADER
+---------- */
+.header__wrapper{
+  
+}
+
+.header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.header .wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link{
+  text-align: center;
+}
+
+.header__logo-link p{
+  font-size: var(--13px);
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  margin-top: var(--10px);
+}
+
+.burger__menu{
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger__menu span{
+  display: block;
+  width: 100%;
+  height: 2px;
+}
+
+.burger__menu span:nth-child(1){
+  position: absolute;
+  top: 0;
+}
+
+.burger__menu span:nth-child(2){
+  position: absolute;
+  margin: 30% auto;
+}
+
+.burger__menu span:nth-child(3){
+  position: absolute;
+  bottom: 0;
+}
+
+.header__menu{
+  display: flex;
+  align-items: center;
+}
+
+.menu__list{
+  display: flex;  
+}
+
+.menu__item{
+  position: relative;
+  margin: 0 var(--35px) 0 0;
+  display: inline-block;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.menu__item:last-child{
+  margin-right: 0px;
+}
+
+.menu__link{
+  font-family: "Arial";
+  font-size: var(--15px);
+  line-height: var(--24px);
+}
+
+.menu__item::first-letter{
+  text-transform: capitalize;
+}

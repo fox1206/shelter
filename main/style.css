@@ -1,0 +1,43 @@
+:root{
+  --10px: 0.625rem;
+  --13px: 0.813rem;
+  --15px: 0.938rem;
+  --20px: 1.25rem;
+  --24px: 1.5rem;
+  --30px: 1.875rem;
+  --35px: 2.188rem;
+  --40px: 2.5rem;
+  --42px: 2.625rem;
+  --44px: 2.75rem;
+  --46px: 2.875rem;
+  --50px: 3.125rem;
+  --60px: 3.75rem;
+  --80px: 5rem;
+  --100px: 6.25px;
+  --120px: 7.5rem;
+
+  --color-brown: #262425;
+  --color-brown-dark: #211F20;
+  --color-brown-light: #5B483A;
+  --color-white: #FFFFFF;
+  --color-white-dark: #CDCDCD;
+  --color-white-dark_I: #B2B2B2;
+  --color-white-light: #FAFAFA;
+  --color-white-light_I: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-primary-light: #FDDCC4;
+  --color-dark_I: #545454;
+  --color-dark_II: #4C4C4C;
+  --color-dark_III: #292929;
+}
+
+/* ----------
+HEADER
+---------- */
+
+
+.burger__menu span{
+  background-color: var(--color-primary);
+}
+
+
