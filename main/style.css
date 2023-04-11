@@ -34,10 +34,80 @@
 /* ----------
 HEADER
 ---------- */
-
-
 .burger__menu span{
   background-color: var(--color-primary);
 }
+
+/* ----------
+MAIN
+---------- */
+/*  -------------------  NOT ONLY  ------------------- */
+.not-only__wrapper{
+  position: relative;
+  display: flex;
+  background: url("./../assets/png/bg/start-screen-gradient-background.png");
+  background-position-y: -120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+}
+
+.main__intro{
+  width: 100%;
+  padding-top: 120px;
+}
+
+.main__intro .wrapper{
+  display: flex;
+  column-gap: 42px;
+}
+
+.intro-left{
+  width: 39.1%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  padding: 223px 0 243px 0;
+}
+
+.intro-right{
+  margin: auto 0 0 0;
+}
+
+.main__intro .title__section{
+  max-width: 310px;
+  line-height: 57.2px;
+  color: var(--color-white);
+}
+
+.main__intro .description__section{
+  color: var(--color-white-dark);
+}
+
+.main__intro .btn{
+  transition: .5s ease;
+  z-index: 1;
+}
+
+.main__intro .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  z-index: -1;
+  transition: .5s ease;
+}
+
+.main__intro .btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+
+
 
 

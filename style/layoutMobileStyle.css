@@ -1,3 +1,9 @@
+@media screen and (max-width: 1200px) {
+  .wrapper{
+    max-width: 92%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header__menu{
     display: none;
@@ -6,4 +12,12 @@
   .burger__menu{
     display: block;
   }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper{
+    max-width: 90%;
+  }
+
+  
 }
