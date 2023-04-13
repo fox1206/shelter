@@ -1,4 +1,10 @@
 @media screen and (max-width: 1200px) {
+  .cards__section{
+    column-gap: 30px;
+  }
+}  
+
+@media screen and (max-width: 1200px) {
   .main__intro .wrapper{
     flex-direction: column;
     row-gap: 100px;
@@ -110,6 +116,13 @@
 
   .about__right{
     width: 92%;
+    margin: 0 auto;
+  }
+
+  .friend__wrapper .title__section{
+    width: 90%;
+    font-size: 25px;
+    line-height: 32.5px;
     margin: 0 auto;
   }
 }

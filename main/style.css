@@ -151,6 +151,116 @@ MAIN
   margin-bottom: 25px;
 }
 
+/*  -------------------  OUR FRIEND  ------------------- */
+.friend__wrapper{
+  background-color: var(--color-white-light_I);
+}
+
+.pets{
+  padding: 80px 0 100px;
+  text-align: center;
+}
+
+.ribbon{
+  /* margin: auto 0; */
+  /* flex-shrink: 0; */
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 50%;
+  border: 2px solid var(--color-primary);
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+.ribbon:hover{
+  
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+.ribbon-left{
+  background-image: url("./../assets/svg/icon__left.svg");
+}
+
+.ribbon-right{
+  background-image: url("./../assets/svg/icon__right.svg");
+}
+
+.friend__wrapper .title__section{
+  letter-spacing: 0.06em;
+  line-height: 45.5px;
+  font-size: var(--35px);
+  color: var(--color-dark_I);
+}
+
+.wrapper__carousel_btn .btn{
+  transition: .5s ease;
+  z-index: 1;
+}
+
+.wrapper__carousel_btn .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  z-index: -1;
+  transition: .5s ease;
+}
+
+.wrapper__carousel_btn .btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+.slider{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.cards__wrapper{
+  display: flex;
+}
+
+.cards__frame{
+  max-width: 990px;
+  overflow: hidden;
+}
+
+.cards__section{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 90px;
+  margin: auto;
+}
+
+.card__item{
+  width: 270px;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--30px);
+  align-items: center;
+  background-color:var(--color-white-light);
+  border-radius: 9px;
+}
+
+.card__item .btn{
+  position: relative;
+  background-color: var(--color-white-light);
+  border: 2px solid var(--color-primary);
+  z-index: 100;
+}
+
+
 
 
 
