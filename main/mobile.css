@@ -1,6 +1,35 @@
 @media screen and (max-width: 1200px) {
+  .cards__frame{
+    width: 870px;
+  }
+
   .cards__section{
     column-gap: 30px;
+  }
+
+  .cards__wrapper{
+    display: flex;
+    transform: translateX(-870px);
+  }
+
+  @keyframes move-left {
+    from { transform: translateX(-870px); }
+    to { transform: translateX(-1740px); }
+  }
+  
+  @keyframes move-right {
+    from { transform: translateX(-870px); }
+    to { transform: translateX(0px); }
+  }
+  
+  .move-left{
+    animation-name: move-left;
+    animation-duration: 2s;
+  }
+  
+  .move-right{
+    animation-name: move-right;
+    animation-duration: 2s;
   }
 }  
 
@@ -35,6 +64,78 @@
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .slider .cards__section > .card__item:nth-child(3) {
+    display: none;
+  }
+
+  .cards__frame{
+    width: 630px;
+  }
+
+  .cards__section{
+    column-gap: 89px;
+  }
+
+  .cards__wrapper{
+    transform: translateX(-630px);
+  }
+
+  @keyframes move-left {
+    from { transform: translateX(-630px); }
+    to { transform: translateX(-1260px); }
+  }
+  
+  @keyframes move-right {
+    from { transform: translateX(-630px); }
+    to { transform: translateX(0px); }
+  }
+  
+  .move-left{
+    animation-name: move-left;
+    animation-duration: 2s;
+  }
+  
+  .move-right{
+    animation-name: move-right;
+    animation-duration: 2s;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards__frame{
+    width: 580px;
+  }
+
+  .cards__section{
+    column-gap: 40px;
+  }
+
+  .cards__wrapper{
+    transform: translateX(-580px);
+  }
+
+  @keyframes move-left {
+    from { transform: translateX(-580px); }
+    to { transform: translateX(-1160px); }
+  }
+  
+  @keyframes move-right {
+    from { transform: translateX(-580px); }
+    to { transform: translateX(0px); }
+  }
+  
+  .move-left{
+    animation-name: move-left;
+    animation-duration: 2s;
+  }
+  
+  .move-right{
+    animation-name: move-right;
+    animation-duration: 2s;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .intro-left{
     width: 70%;
@@ -58,6 +159,44 @@
 
   .about__right{
     width: 60.9%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider .cards__section > .card__item:nth-child(2) {
+    display: none;
+  }
+
+  .cards__frame{
+    width: 270px;
+  }
+
+  .cards__section{
+    column-gap: 0;
+  }
+
+  .cards__wrapper{
+    transform: translateX(-270px);
+  }
+
+  @keyframes move-left {
+    from { transform: translateX(-270px); }
+    to { transform: translateX(-540px); }
+  }
+  
+  @keyframes move-right {
+    from { transform: translateX(-270px); }
+    to { transform: translateX(0px); }
+  }
+  
+  .move-left{
+    animation-name: move-left;
+    animation-duration: 2s;
+  }
+  
+  .move-right{
+    animation-name: move-right;
+    animation-duration: 2s;
   }
 }
 
@@ -127,6 +266,30 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .slider > .ribbon{
+    position: absolute;
+    bottom: -70px;
+  }
+
+  .slider{
+    position: relative;
+    flex-direction: column;
+  }
+
+  .ribbon-left{
+    left: 20%;
+  }
+  
+  .ribbon-right{
+    right: 20%;
+  }
+
+  .wrapper__carousel_btn{
+    margin-top: 110px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .main__picture{
     float: right;
@@ -148,5 +311,17 @@
 
   .about__left{
     padding: 0 0 0 0;
+  }
+
+  .friend__wrapper .title__section{
+    width: 100%;
+  }
+
+  .pets{
+    padding: 42px 0 42.4px;
+  }
+
+  .slider{
+    margin: 40px 0;
   }
 }
