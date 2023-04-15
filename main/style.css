@@ -38,6 +38,36 @@ HEADER
   background-color: var(--color-primary);
 }
 
+.header__logo h1{
+  color: var(--color-primary);
+}
+
+.header__logo p{
+  color: var(--color-white);
+}
+
+.menu__list .menu__item a{
+  color: var(--color-white-dark);
+}
+
+.menu__list .menu__item.active::before{
+  background-color: var(--color-primary);
+}
+
+.menu__list .menu__item.active::before{
+  width: 100%;
+}
+
+.menu__list .menu__item.active a{
+  color: var(--color-white-light);
+  cursor: default;
+}
+
+.menu__list .menu__item:hover a{
+  transition: all .5s ease;
+  color: var(--color-white-light);
+}
+
 /* ----------
 MAIN
 ---------- */

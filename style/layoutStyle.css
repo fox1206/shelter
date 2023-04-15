@@ -195,3 +195,22 @@ HEADER
 .menu__item::first-letter{
   text-transform: capitalize;
 }
+
+/* ------ active ------ */
+.menu__item.active::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: width .3s ease;
+}
+
+.menu__item.active::before{
+  width: 100%;
+}
+
+.menu__item.active a{
+  cursor: default;
+}
