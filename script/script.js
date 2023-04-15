@@ -88,7 +88,7 @@ function resizeWindow() {
 
 /* обработка кликов */
 function changeBTN(event){
-  if(event.target.classList.contains("ribbon-left")){
+  if(event.target.classList.contains("ribbon-right")){
     // console.log("left btn");
     SECTION_LEFT.innerHTML = '';
     const newArray = renderCards(SECTION_LEFT);
