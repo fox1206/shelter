@@ -1,4 +1,5 @@
 import petsJson from './pets.json' assert { type: 'json' };
+import helpIcons from './iconsData.json' assert { type: 'json' };
 // console.log(petsJson[0].name);
 
 // slider
@@ -118,10 +119,28 @@ function changeBTN(event){
 /* event */
 BTN.forEach((btn) => btn.addEventListener("click", changeBTN));
 
-/* вызов функций */
+/* вызов функций slider*/
 shuffle(petsJson);
 renderCards(document.querySelector(".cards__left"));
 renderCards(document.querySelector(".cards__active"));
 renderCards(document.querySelector(".cards__right"));
 window.addEventListener('resize', () => resizeWindow, false);
 let resizeTimeout;
+
+/* формирование блока поддердка (иконки) */
+function createSupportItem(){
+  helpIcons.forEach((el) => {
+    const li = document.createElement('li');
+    li.className = 'item';
+    const liContent = `<div class="icon">
+                          <img src=${el.path} alt=${el.title}/>
+                      </div>
+                      <h4 class="icon-name">${el.title}</h4>`;
+  
+    li.innerHTML = liContent;
+    document.querySelector('.support__box').appendChild(li);
+  });
+}
+createSupportItem();
+
+
