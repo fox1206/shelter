@@ -1,0 +1,12 @@
+@media screen and (max-width: 550px) {
+  .pets__wrapper .title__section{
+    width: 90%;
+    font-size: 25px;
+    line-height: 32.5px;
+    margin: 0 auto;
+  }
+
+  .pagination{
+    column-gap: 8px;
+  }
+}

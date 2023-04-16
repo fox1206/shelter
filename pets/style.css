@@ -1,0 +1,127 @@
+:root{
+  --color-brown: #262425;
+  --color-brown-dark: #211F20;
+  --color-brown-light: #5B483A;
+  --color-white: #FFFFFF;
+  --color-white-dark: #CDCDCD;
+  --color-white-dark_I: #B2B2B2;
+  --color-white-light: #FAFAFA;
+  --color-white-light_I: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-primary-light: #FDDCC4;
+  --color-dark_I: #545454;
+  --color-dark_II: #4C4C4C;
+  --color-dark_III: #292929;
+  --color-black: #000000;
+}
+
+/* ----------
+HEADER
+---------- */
+.header__wrapper{
+  background-color: var(--color-white);
+}
+
+.burger__menu span{
+  background-color: var(--color-black);
+}
+
+.header__logo h1{
+  color: var(--color-dark_I);
+}
+
+.header__logo p{
+  color: var(--color-dark_I);
+}
+
+.menu__list .menu__item a{
+  color: var(--color-dark_I);
+}
+
+.menu__list .menu__item.active::before{
+  background-color: var(--color-primary);
+}
+
+.menu__list .menu__item.active::before{
+  width: 100%;
+}
+
+.menu__list .menu__item.active a{
+  color: var(--color-dark_III);
+  cursor: default;
+}
+
+.menu__list .menu__item:hover a{
+  transition: all .5s ease;
+  color: var(--color-dark_III);
+}
+
+/* ----------
+MAIN
+---------- */
+.pets__wrapper{
+  padding-top: 120px;
+  background-color: var(--color-white-light_I);
+}
+
+.pets{
+  text-align: center;
+  padding: 80px 0 100px;
+}
+
+.pets .title__section{
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark_I);
+}
+
+.pets__box{
+  margin: 60px 0;
+}
+
+.pagination{
+  display: inline-flex;
+  column-gap: 20px;
+}
+
+button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  background-color: transparent;
+}
+
+button:disabled{
+  border: 2px solid var(--color-white-dark);
+  color: var(--color-white-dark);
+}
+
+button:nth-child(3){
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+button:nth-child(4){
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+}
+
+button:nth-child(5){
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+}
+
+
