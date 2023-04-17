@@ -1,67 +1,134 @@
 import petsJson from './pets.json' assert { type: 'json' };
 
 /* пагинация */
-const page = document.querySelector(".btn__page-curren");
-const BTN_PAGE = document.querySelectorAll(".btn__page");
-const arrayPets = [...petsJson, ...petsJson, ...petsJson, ...petsJson, ...petsJson, ...petsJson, ...petsJson];
-// console.log(arrayPets);
+const petBox = document.querySelector(".pets__box");
+const current = document.querySelector(".btn__page-current");
+const BTN_PAGE = document.querySelectorAll('.btn__page');
 
+BTN_PAGE.forEach((btn) => btn.addEventListener("click", clickBtn));
+
+let arrayPages = []; //для хранения карточек на страницах (6 страниц)
 let countCards = 8;
-let pageNumber = 1;
-let arrayPages = [];
+let page = 1;
 
-if (window.innerWidth < 1250) countCards = 6;
-if (window.innerWidth < 650) countCards = 3;
-createPetsBox(countCards);
-
-/* адаптив для отрисовки и получения числа карточек*/
-function resizeWindow() {
-  if(!resizeTimeout) {
-      resizeTimeout = setTimeout(() => {
-          resizeTimeout = null;
-          if (window.innerWidth > 1280) countCards = 8;
-          if (window.innerWidth < 1250) countCards = 6;
-          if (window.innerWidth < 650) countCards = 3;
-          if (window.innerWidth > 650 && pageNumber > arrayPages.length) pageNumber = arrayPages.length;
-          if (window.innerWidth > 1280 && pageNumber > arrayPages.length) pageNumber = arrayPages.length;
-          if (window.innerWidth <= 1250 && pageNumber < arrayPages.length) pageNumber = arrayPages.length;
-          if (window.innerWidth < 650 && pageNumber < arrayPages.length) pageNumber = arrayPages.length;
-      }, 100);
-  }
+/* перемешивание карточек в массиве */
+function shuffle(arr) {
+  return arr.sort(() => Math.round(Math.random() * 100) - 50);
 }
 
-/* cоздать бокс со всеми карточками питомцев */
-function createPetsBox(countCards){
-  const PETS_BOX = document.querySelector(".pets__box");
+/* рандомное заполнение массива данных */
+function random(){
   arrayPages = [];
-
+  
   for(let i = 0; i < 48; i += countCards){
-    let arr = arrayPets.slice(i, i + countCards).sort(() => {
-      Math.random() - 0.5;
-    });
-    // console.log(arr);
-
-    arrayPages.push(arr);
-    // console.log(arrayPages);
+    let array = shuffle([...petsJson]);
+    // console.log(array);
+    arrayPages.push(array);
   }
+  // console.log(arrayPages);
+  // console.log(arrayPages[0]);
 
-  for(let i = 0; i < 48; i++){
-    let cardItem = document.createElement("div");
-    cardItem.className = "card__item";
+  return arrayPages;
+}
 
-    const cardContent = `<div class="card__picture">
-                          <img src="${arrayPages[0][i].img}" alt="${arrayPages[0][i].name}"></img>
-                        </div>
-                        <div class="card__title">
-                          <p>${arrayPages[0][i].name}</p>
-                        </div>
-                        <div class="card__btn">
-                          <a class="btn" href="#">Learn more</a>
-                        </div>`;
-    cardItem.innerHTML = cardContent;
-    PETS_BOX.prepend(cardItem);
+/* создание карточки */
+function createCards(name, img){
+  const card = document.createElement("div");
+  card.classList.add("card__item");
+
+  card.innerHTML = `<div class="card__picture">
+                      <img src="${img}" alt="${name}"/>
+                   </div>
+                   <div class="card__title">
+                      <p>${name}</p>
+                   </div>
+                   <div class="card__btn">
+                    <a class="btn" href="#">Learn more</a>
+                   </div>`;
+
+  petBox.appendChild(card);
+  return card;                   
+}
+
+/* получить данные */
+function getCard(){
+  let pets = random();
+
+  let j = 0;
+
+  for(let i = 0; i < countCards; i++){
+    j++;
+    createCards(pets[0][i].name, pets[0][i].img);
+  }
+  console.log(pets);
+}
+getCard();
+
+/* адаптив */
+function resizeWin(){
+  if(!resizeTimeout){
+    resizeTimeout = setTimeout(() => {
+      resizeTimeout = null;
+      countCardsShow();
+    }, 100);
   }
 }
 
-window.addEventListener('resize', resizeWindow, false);
+/* определение значние переменной */
+function countCardsShow(){
+  if(window.innerWidth >= 1250){
+    countCards = 8;
+  }
+  if(window.innerWidth < 1250){
+    countCards = 6;
+  }
+  if(window.innerWidth < 650){
+    countCards = 3;
+  }
+}
+
+/* функция перелистывания на следующую страницу и снятие disabled*/
+function changePets(){
+  document.querySelectorAll(".card__item").forEach((e) => e.remove());
+  getCard();
+  current.innerHTML = page;
+  BTN_PAGE.forEach((el) => el.disabled = false);
+
+  if(page === 1){
+    BTN_PAGE[0].disabled = true;
+    BTN_PAGE[1].disabled = true;
+  }
+  if(page === arrayPages.length){
+    BTN_PAGE[2].disabled = true;
+    BTN_PAGE[3].disabled = true;
+  }
+}
+
+/* переключение */
+function clickBtn(event){
+  let btn = event.target.dataset.p;
+  // changePets();
+  switch(btn){
+    case "first":
+      page = 1;
+      changePets();
+    break;
+    case "last":
+      page = arrayPages.length;
+      changePets();
+    break;
+    case "next":
+      page++;
+      changePets();
+    break;
+    case 'prew':
+      page--;
+      changePets();
+    break;
+  }
+}
+
+
+/* событие по изменению окна браузера */
+window.addEventListener("resize", resizeWin, false);
 let resizeTimeout;
