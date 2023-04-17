@@ -170,24 +170,12 @@ button{
   background-color: transparent;
 }
 
-button:disabled{
-  border: 2px solid var(--color-white-dark);
-  color: var(--color-white-dark);
-}
-
 button:nth-child(3){
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
 }
 
-button:nth-child(4){
+button:enabled{
   border: 2px solid var(--color-primary);
   cursor: pointer;
 }
-
-button:nth-child(5){
-  border: 2px solid var(--color-primary);
-  cursor: pointer;
-}
-
-
