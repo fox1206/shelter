@@ -3,11 +3,8 @@ import helpIcons from './iconsData.json' assert { type: 'json' };
 // console.log(petsJson[0].name);
 
 // slider
-// console.log(petsJson);
 const cardsWrapper = document.querySelector(".cards__wrapper");
 const BTN = document.querySelectorAll(".ribbon");
-const BTN_RIGHT = document.querySelector('.ribbon-right');
-const BTN_LEFT = document.querySelector('.ribbon-left');
 const SECTION_ACTIVE = document.querySelector(".cards__active");
 const SECTION_LEFT = document.querySelector(".cards__left");
 const SECTION_RIGHT = document.querySelector(".cards__right");
@@ -31,7 +28,7 @@ function createCard(path, name) {
           <p>${name}</p>
         </div>
         <div class="card__btn">
-          <a class="btn" href="#">Learn more</a>
+          <a class="btn">Learn more</a>
         </div>`;
   
   const card = document.createElement("div");
@@ -99,7 +96,7 @@ function changeBTN(event){
       cardsWrapper.classList.remove("move-right");
       SECTION_ACTIVE.innerHTML = '';
       renderCards(SECTION_ACTIVE, newArray);
-    })
+    });
   } else {
     // console.log("right btn");
     SECTION_RIGHT.innerHTML = '';
@@ -110,11 +107,13 @@ function changeBTN(event){
     cardsWrapper.addEventListener("animationend", () => {
       cardsWrapper.classList.remove("move-left");
       SECTION_ACTIVE.innerHTML = '';
-      renderCards(SECTION_ACTIVE, newArray);
+      renderCards(SECTION_ACTIVE, newArray);  
     });
   }
   shuffle(petsJson);
 }
+
+
 
 /* event */
 BTN.forEach((btn) => btn.addEventListener("click", changeBTN));
@@ -143,4 +142,48 @@ function createSupportItem(){
 }
 createSupportItem();
 
+// попап
+const MODAL_WRAPPER = document.querySelector(".modal__wrapper");
+const MODAL_CONTENT = document.querySelector(".modal__content");
+const MODAL_CLOSE = document.querySelector(".modal__close");
+const MORE_BTN = document.querySelectorAll('.cards__active .card__btn a');
+
+MODAL_CONTENT.addEventListener('click', (event) => event.stopPropagation());
+
+/* функция открытия модального окна при клике на кнопку в карточке */
+function createModalWin(){
+
+  let divPicture = document.createElement("div");
+  let divInfo = document.createElement("div");
+    
+  divPicture.className = "modal__picture";
+  divInfo.className = "modal__info";
+
+  MORE_BTN.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      let array = petsJson[i];
+
+      divPicture.innerHTML = `<img src="${array.img}" alt="${array.name}" />`
+      divInfo.innerHTML = `
+                            <h3>${array.name}</h3>
+                            <h4>${array.breed}</h4>
+                            <p>${array.description}</p>
+                            <ul>
+                              <li>${array.age}</li>
+                              <li>${array.inoculations}</li>
+                              <li>${array.diseases}</li>
+                              <li>${array.parasites}</li>
+                            </ul>
+                          `;
+
+      MODAL_CONTENT.append(divPicture);
+      MODAL_CONTENT.append(divInfo);
+
+      MODAL_WRAPPER.classList.add("show");
+    });
+  });
+
+  MODAL_CLOSE.addEventListener("click", () => MODAL_WRAPPER.classList.remove("show"));
+}
+createModalWin();
 
