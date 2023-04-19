@@ -11,6 +11,7 @@
   --50px: 3.125rem;
   --100px: 6.25rem;
 
+  --color-black: #000000;
   --color-brown-dark: #211F20;
   --color-brown-light: #5B483A;
   --color-dark_III: #292929;
@@ -33,6 +34,11 @@ html {
 
 body{
   user-select: none;
+}
+
+body.modal{
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 ul{
@@ -327,6 +333,7 @@ FOOTER
 .modal__content{
   position: relative;
   top: 18%;
+  display: flex;
   margin: auto;
   max-width: 900px;
   height: 500px;
@@ -354,4 +361,61 @@ FOOTER
 .modal__close:hover{
   border-color: var(--color-primary-light);
   background-color: var(--color-primary-light);
+}
+
+.modal__picture{
+  width: 500px;
+}
+
+.modal__picture img{
+  height: 500px;
+  border-bottom-left-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+.modal__info{
+  width: 400px;
+  padding: 50px 20px 0 30px;
+  font-family: 'Georgia';
+  letter-spacing: 0.06em;
+  color: var(--color-black);
+}
+
+.modal__info h3{
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  margin-bottom: 10px;
+}
+
+.modal__info h4{
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.modal__info p{
+  font-family: 'Georgia';
+  margin:  40px 0;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.modal__info li{
+  font-size: 15px;
+  line-height: 17px;
+  margin-bottom: 11px;
+}
+
+.modal__info li::before{
+  content: "•";
+  margin-right: 10px;
+  color: var(--color-primary);
+}
+
+.modal__info li:last-child{
+  margin-bottom: 0px;
+}
+
+.modal__info span{
+  font-weight: 700;
 }

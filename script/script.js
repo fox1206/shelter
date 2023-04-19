@@ -169,10 +169,10 @@ function createModalWin(){
                             <h4>${array.breed}</h4>
                             <p>${array.description}</p>
                             <ul>
-                              <li>${array.age}</li>
-                              <li>${array.inoculations}</li>
-                              <li>${array.diseases}</li>
-                              <li>${array.parasites}</li>
+                              <li><span>Age: </span>${array.age}</li>
+                              <li><span>Inoculations: </span>${array.inoculations}</li>
+                              <li><span>Diseases: </span>${array.diseases}</li>
+                              <li><span>Parasites: </span>${array.parasites}</li>
                             </ul>
                           `;
 
@@ -180,10 +180,14 @@ function createModalWin(){
       MODAL_CONTENT.append(divInfo);
 
       MODAL_WRAPPER.classList.add("show");
+      document.body.classList.add('modal');
     });
   });
 
-  MODAL_CLOSE.addEventListener("click", () => MODAL_WRAPPER.classList.remove("show"));
+  MODAL_CLOSE.addEventListener("click", () => {
+    MODAL_WRAPPER.classList.remove("show");
+    document.body.classList.remove('modal');
+  });
 }
 createModalWin();
 
