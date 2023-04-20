@@ -45,4 +45,19 @@ function isOpen(){
   }
 }
 
+/**
+ *  при нажатии на элемент списка сворачивается меню 
+ *  и остается на месте бургер меню
+ */
+function clickElementCloseMenu(isOpen) {
+  menuItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      menu.classList.toggle("open__menu");
+      burgerMenu.classList.toggle("animation");
+      isOpen();
+    });
+  });
+}
+
 openCloseMenu(isOpen);
+clickElementCloseMenu(isOpen);
