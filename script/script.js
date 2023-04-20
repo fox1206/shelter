@@ -113,8 +113,6 @@ function changeBTN(event){
   shuffle(petsJson);
 }
 
-
-
 /* event */
 BTN.forEach((btn) => btn.addEventListener("click", changeBTN));
 
