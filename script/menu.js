@@ -59,5 +59,18 @@ function clickElementCloseMenu(isOpen) {
   });
 }
 
+/** 
+ * клик на свободную область закроет меню
+*/
+function bodyClose(isOpen){
+  shadow.addEventListener('click', () => {
+    // console.log('body click');
+      menu.classList.remove("open__menu");
+      burgerMenu.classList.remove("animation");
+      isOpen();
+  });
+}
+
 openCloseMenu(isOpen);
 clickElementCloseMenu(isOpen);
+bodyClose(isOpen);
