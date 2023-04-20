@@ -129,7 +129,7 @@ MAIN
   position: relative;
   background-color: var(--color-white-light);
   border: 2px solid var(--color-primary);
-  z-index: 100;
+  z-index: 1;
 }
 
 .card__item .btn::before{

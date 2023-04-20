@@ -53,8 +53,32 @@
 }
 
 @media screen and (max-width: 767px) {
+  body.scrollMenu{
+    overflow-y: hidden;
+  }
+
   .header__menu{
     display: none;
+  }
+
+  /* --------- body shadow ---------  */
+ .shadow{
+    display: none;
+    position: fixed;
+    left: 0;
+    top :0;
+    height: 100vh;
+    width: calc(100vw - 320px); 
+    background: rgba(41, 41, 41, 0.6);
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+    z-index: 100;
+  }
+
+  .shadow.shadowBody{ 
+    display: block;
+    opacity: 0.6;
+    z-index: 150;
   }
 
   .header__menu{
@@ -72,6 +96,13 @@
 
   .open__menu{
     transform: translateX(0);
+  }
+
+  .animation{
+    transition: 0.3s all linear;
+    transform: rotate(90deg);
+    position: fixed;
+    right: 40px;
   }
 
   .menu__list{

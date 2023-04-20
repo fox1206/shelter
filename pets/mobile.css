@@ -21,6 +21,22 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .menu__list .menu__item a{
+    color:#cdcdcd;
+  }
+  
+  .menu__list .menu__item.active a{
+    color: #fafafa;
+    cursor: default;
+  }
+  
+  .menu__list .menu__item:hover a{
+    transition: all .5s ease;
+    color: #fafafa;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .pets__box{
     display: flex;
