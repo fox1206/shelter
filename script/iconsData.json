@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Pet food",
+    "path": "./../assets/svg/help/icon-1.svg"
+  },
+  {
+    "title": "Transportation",
+    "path": "./../assets/svg/help/icon-2.svg"
+  },
+  {
+    "title": "Toys",
+    "path": "./../assets/svg/help/icon-3.svg"
+  },
+  {
+    "title": "Bowls and cups",
+    "path": "./../assets/svg/help/icon-4.svg"
+  },
+  {
+    "title": "Shampoos",
+    "path": "./../assets/svg/help/icon-5.svg"
+  },
+  {
+    "title": "Vitamins",
+    "path": "./../assets/svg/help/icon-6.svg"
+  },
+  {
+    "title": "Medicines",
+    "path": "./../assets/svg/help/icon-7.svg"
+  },
+  {
+    "title": "Collars / leashes",
+    "path": "./../assets/svg/help/icon-8.svg"
+  },
+  {
+    "title": "Sleeping areas",
+    "path": "./../assets/svg/help/icon-9.svg"
+  }
+]

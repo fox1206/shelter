@@ -1,0 +1,500 @@
+:root{
+  --10px: 0.625rem;
+  --13px: 0.813rem;
+  --15px: 0.938rem;
+  --20px: 1.25rem;
+  --24px: 1.5rem;
+  --30px: 1.875rem;
+  --35px: 2.188rem;
+  --40px: 2.5rem;
+  --42px: 2.625rem;
+  --44px: 2.75rem;
+  --46px: 2.875rem;
+  --50px: 3.125rem;
+  --60px: 3.75rem;
+  --80px: 5rem;
+  --100px: 6.25px;
+  --120px: 7.5rem;
+
+  --color-brown: #262425;
+  --color-brown-dark: #211F20;
+  --color-brown-light: #5B483A;
+  --color-white: #FFFFFF;
+  --color-white-dark: #CDCDCD;
+  --color-white-dark_I: #B2B2B2;
+  --color-white-light: #FAFAFA;
+  --color-white-light_I: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-primary-light: #FDDCC4;
+  --color-dark_I: #545454;
+  --color-dark_II: #4C4C4C;
+  --color-dark_III: #292929;
+}
+
+/* ----------
+HEADER
+---------- */
+.burger__menu span{
+  background-color: var(--color-primary);
+}
+
+.header__logo h1{
+  color: var(--color-primary);
+}
+
+.header__logo p{
+  color: var(--color-white);
+}
+
+.menu__list .menu__item a{
+  color: var(--color-white-dark);
+}
+
+.menu__list .menu__item.active::before{
+  background-color: var(--color-primary);
+}
+
+.menu__list .menu__item.active::before{
+  width: 100%;
+}
+
+.menu__list .menu__item.active a{
+  color: var(--color-white-light);
+  cursor: default;
+}
+
+.menu__list .menu__item:hover a{
+  transition: all .5s ease;
+  color: var(--color-white-light);
+}
+
+/* ----------
+MAIN
+---------- */
+/*  -------------------  NOT ONLY  ------------------- */
+.not-only__wrapper{
+  position: relative;
+  display: flex;
+  background: url("./../assets/png/bg/start-screen-gradient-background.png");
+  background-position-y: -120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+}
+
+.main__intro{
+  width: 100%;
+  padding-top: 120px;
+}
+
+.main__intro .wrapper{
+  display: flex;
+  column-gap: 42px;
+}
+
+.intro-left{
+  width: 39.1%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  padding: 223px 0 243px 0;
+}
+
+.intro-right{
+  margin: auto 0 0 0;
+}
+
+.main__intro .title__section{
+  max-width: 310px;
+  line-height: 57.2px;
+  color: var(--color-white);
+}
+
+.main__intro .description__section{
+  color: var(--color-white-dark);
+}
+
+.main__intro .btn{
+  transition: .5s ease;
+  z-index: 1;
+}
+
+.main__intro .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  z-index: -1;
+  transition: .5s ease;
+}
+
+.main__intro .btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+/*  -------------------  ABOUT  ------------------- */
+.about__wrapper{
+  display: flex;
+  background-color: var(--color-white);
+}
+
+.main__about .wrapper{
+  display: flex;
+  column-gap: var(--120px);
+  padding: 80px 0 100px;
+}
+
+.about__left .picture__box{
+  width: 300px;
+  height: 408px;
+  background-image: url("./../assets/png/pets_page/dog_cat.png");
+  margin: auto auto auto 175px;
+}
+
+.about__right{
+  width: 36%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.about__right .title__section{
+  max-width: 370px;
+  letter-spacing: 0.06em;
+  line-height: 45.5px;
+  font-size: var(--35px);
+  color: var(--color-dark_I);
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.about__right .description__section{
+  line-height: 24px;
+  color: var(--color-dark_II);
+}
+
+.about__right .description__section p:first-child{
+  margin-bottom: 25px;
+}
+
+/*  -------------------  OUR FRIEND  ------------------- */
+.friend__wrapper{
+  background-color: var(--color-white-light_I);
+}
+
+.pets{
+  padding: 80px 0 100px;
+  text-align: center;
+}
+
+.ribbon{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 50%;
+  border: 2px solid var(--color-primary);
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+.ribbon:hover{
+  
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+.ribbon-left{
+  background-image: url("./../assets/svg/icon__left.svg");
+}
+
+.ribbon-right{
+  background-image: url("./../assets/svg/icon__right.svg");
+}
+
+.friend__wrapper .title__section{
+  letter-spacing: 0.06em;
+  line-height: 45.5px;
+  font-size: var(--35px);
+  color: var(--color-dark_I);
+}
+
+.wrapper__carousel_btn .btn{
+  transition: .5s ease;
+  z-index: 1;
+}
+
+.wrapper__carousel_btn .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  z-index: -1;
+  transition: .5s ease;
+}
+
+.wrapper__carousel_btn .btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+.slider{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.cards__wrapper{
+  display: flex;
+}
+
+.cards__frame{
+  max-width: 990px;
+  overflow: hidden;
+}
+
+.cards__wrapper{
+  display: flex;
+  transform: translateX(-990px);
+}
+
+@keyframes move-left {
+  from { transform: translateX(-990px); }
+  to { transform: translateX(-1980px); }
+}
+
+@keyframes move-right {
+  from { transform: translateX(-990px); }
+  to { transform: translateX(0px); }
+}
+
+.move-left{
+  animation-name: move-left;
+  animation-duration: 2s;
+}
+
+.move-right{
+  animation-name: move-right;
+  animation-duration: 2s;
+}
+
+.cards__section{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 90px;
+  margin: auto;
+}
+
+.card__item{
+  width: 270px;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--30px);
+  align-items: center;
+  background-color:var(--color-white-light);
+  border-radius: 9px;
+}
+
+.card__item:hover{
+  transition:  .5 ease;
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 26px 0px var(--color-primary-light);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.card__title p{
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark_I);
+}
+
+.card__item .btn{
+  position: relative;
+  background-color: var(--color-white-light);
+  border: 2px solid var(--color-primary);
+  z-index: 100;
+}
+
+.card__item .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  z-index: -1;
+  transition: .5s ease;
+}
+
+.card__item .btn:hover{
+  border-color: var(--color-primary-light);
+}
+
+.card__item .btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+/*  -------------------  HELP  ------------------- */
+.help__wrapper{
+  background-color: var(--color-white);
+}
+
+.help{
+  padding: 80px 0 100px;
+  text-align: center;
+}
+
+.help .title__section{
+  margin: 0 auto;
+  max-width: 310px;
+  letter-spacing: 0.06em;
+  line-height: 45.5px;
+  font-size: var(--35px);
+  color: var(--color-dark_I);
+  text-align: center;
+}
+
+.wrapper__support{
+  margin: var(--60px) 0 0 0;
+}
+
+.support__box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 120px;
+  row-gap: 53px;
+}
+
+.support__box .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--30px);
+}
+
+.wrapper__support h4{
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark_I);
+}
+
+/*  -------------------  DONATION  ------------------- */
+.donation__wrapper{
+  background-color: var(--color-white-light_I);
+}
+
+.donattion{
+  padding: 80px 0 100px 0;
+}
+
+.donation__wrapper .wrapper{
+  display: flex;
+  column-gap: 30px;
+}
+
+.donation__left{
+  width: 55%;
+  display: flex;
+  justify-content: end;
+}
+
+.donation__left .picture__box{
+  width: 505px;
+  height: 261px;
+  background-image: url("./../assets/png/pets_page/donation-dog.png");
+  margin-top: 10px;
+}
+
+.donation__right{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donation__right .title__section h2{
+  width: 300px;
+  letter-spacing: 0.06em;
+  line-height: 45.5px;
+  font-size: var(--35px);
+  color: var(--color-dark_I);
+}
+
+.donation__right .title__section h5{
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  margin-top: var(--20px);
+  color: var(--color-dark_I);
+}
+
+.donation__right .card__info p{
+  font-family: 'Georgia';
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -5px;
+}
+
+.donation__right .card__info p::before{
+  content: url("./../assets/svg/credit-card.svg");
+  position: relative;
+  top: 6px;
+  margin-right: 15px;
+}
+
+.donation__right .card__info{
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 9px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--color-dark_I);
+  background-color: var(--color-primary);
+}
+
+.donation__right .card__info:hover{
+  transition: .3s ease;
+  background-color: var(--color-primary-light);
+}
+
+.donation__rightt .description__section{
+  width: 70%;
+}
+
+.donation__right .description__section p {
+  width: 380px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-white-dark_I);
+}
