@@ -327,19 +327,24 @@ FOOTER
   z-index: 1000;
 }
 
+.modal__box{
+  position: relative;
+  max-width: 900px;
+  height: 500px;
+  background-color: var(--color-white-light);
+  position: relative;
+  top: 18%;
+  margin: auto;
+  border-radius: 9px;
+}
+
 .modal__wrapper.show{
   display: block;
 }
 
 .modal__content{
-  position: relative;
-  top: 18%;
+  width: 100%;
   display: flex;
-  margin: auto;
-  max-width: 900px;
-  height: 500px;
-  border-radius: 9px;
-  background-color: var(--color-white-light);
 }
 
 .modal__close{

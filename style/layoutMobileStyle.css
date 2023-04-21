@@ -5,10 +5,20 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .modal__content{
-    top: 25%;
+  .modal__box{
     max-width: 630px;
     height: 350px;
+    background-color: var(--color-white-light);
+    position: relative;
+    top: 27%;
+    margin: auto;
+    border-radius: 9px;
+  } 
+
+  .modal__content{
+    /* top: 25%;
+    max-width: 630px;
+    height: 350px; */
   }
 
   .modal__picture{
@@ -16,6 +26,7 @@
   }
   
   .modal__picture img{
+    width: 350px;
     height: 350px;
   }
   
@@ -128,10 +139,10 @@
     display: block;
   }
 
-  .modal__content{
-    top: 25%;
+  .modal__box{
     max-width: 75%;
     height: auto;
+    top: 25%;
   }
 
   .modal__picture{
