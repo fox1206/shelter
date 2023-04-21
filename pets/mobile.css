@@ -1,0 +1,75 @@
+@media screen and (max-width: 1250px) {
+  .pets__box{
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+  }
+
+  .pets__box .card__item:nth-child(7),
+  .pets__box .card__item:nth-child(8){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pets{
+    padding: 80px 0 76px;
+  }
+
+  .pets__box{
+    margin: 30px 0 40px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu__list .menu__item a{
+    color:#cdcdcd;
+  }
+  
+  .menu__list .menu__item.active a{
+    color: #fafafa;
+    cursor: default;
+  }
+  
+  .menu__list .menu__item:hover a{
+    transition: all .5s ease;
+    color: #fafafa;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pets__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pets__box .card__item:nth-child(4),
+  .pets__box .card__item:nth-child(5),
+  .pets__box .card__item:nth-child(6){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pets__wrapper .title__section{
+    width: 90%;
+    font-size: 25px;
+    line-height: 32.5px;
+    margin: 0 auto;
+  }
+
+  .pagination{
+    column-gap: 8px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .pets{
+    padding: 42px 0 42px;
+  }
+
+  .wrapper .title__section{
+    width: 100%;
+  }
+}
